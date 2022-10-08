@@ -1,0 +1,108 @@
+<%- include('header') -%>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="/" class="logo"><strong>Blog</strong> <span>Website</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+		                <li class="active"> <a href="/">Home </a> </li>
+		           		<li> <a href="/articles/create">Create Blog</a> </li>
+            		</ul>
+				</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Lorem ipsum dolor sit amet isicing</h1>
+							</header>
+							<div class="content">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, libero!</p>
+								<ul class="actions">
+									<li><a href="#" class="button next scrolly">Contact us</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+						<!--	About us -->
+						 <!-- <section>
+								<div class="inner">
+									<header class="major">
+										<h2>About us</h2>
+									</header>
+									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+									<ul class="actions">
+										<li><a href="about-us.html" class="button next">Read more</a></li>
+									</ul>
+								</div>
+							</section> -->
+
+							<!-- Blog Posts -->
+							<section class="tiles">
+
+							<% articles.forEach(article =>{ %>
+								<article>
+									<span class="image">
+										
+										<img src="/static/assets/images/blog-1-720x480.jpg" alt="" />
+									</span> 
+
+									<header class="major">
+										<h3>
+											<%= article.title %>	
+										</h3>
+
+										<p><br> <span><%= article.author %></span> | <span><%= article.createdAt.toLocaleDateString() %> </span> | <span>114</span></p>
+
+										<div class="major-actions">
+										
+											<a href="articles/<%= article.slug %>" class="button small next scrolly">Read Blog</a>
+
+										</div>
+									</header>
+								</article>
+							<% }) %>
+
+							</section>
+							
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="icons">
+							<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>Copyright © 2022 Splashray</li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+<%- include('footer') -%>
